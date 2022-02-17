@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+route::get('/toto',function(){
+    return view ('toto');
+});
+
+route::get('/etudiant',function(){
+    $etudiants=['toto','titi','koko','dodo'];
+    return view ('etudiant',compact('etudiants'));
+});
+route::get('/master',function(){
+    return view ('master');
+});
+
+route::get('/payement',function(){
+    return view ('payement');
+});
