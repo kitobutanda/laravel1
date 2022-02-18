@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('/toto',function(){
-    return view ('toto');
+route::get('/kito',function(){
+    return view ('kito');
 });
 
 route::get('/etudiant',function(){
