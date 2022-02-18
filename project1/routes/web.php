@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +29,21 @@ route::get('/master',function(){
     return view ('master');
 });
 
-route::get('/payement',function(){
+route::get('/finance',function(){
     return view ('payement');
-});
+})->name('payement');
+route::get('/new_etudiant', function(){
+return view('new_etudiant');
+})->name('new');
+
+// insertion dans la bd
+
+Route::post('/store_etudiant',function(Request $request)
+{
+ \DB::table('etudiants')->insert([
+'noms'=>$request->noms,
+'age'=>$request->age
+ ]);  
+}
+)->name('store_etudiants');
+// fin route insert

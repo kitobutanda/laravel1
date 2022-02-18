@@ -22,7 +22,7 @@ background-color: red;
 <body>
     <!-- menu  -->
     <ul id="menu ">
-        <li><a href="/etudiant">etudiant</a></li>
+        <li><a href="{{route('new')}}">etudiant</a></li>
         <li><a href="/payement">payement</a></li>
     </ul>
     <!-- fin menu -->

@@ -1,4 +1,5 @@
 @extends('master');
+
 @section('contenu');
 <p>hello from etudiant</p>
 <ul>
@@ -6,5 +7,6 @@
 <li>{{$item}}</li>
     @endforeach
 </ul>
+<a href="{{route('new')}}"> nouveau etudiant </a>
 @endsection
 
