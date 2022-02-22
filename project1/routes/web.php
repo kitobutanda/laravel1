@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\etudiantcontrolleur;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,14 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('/kito',function(){
-    return view ('kito');
+route::get('/toto',function(){
+    return view ('toto');
 });
-
-route::get('/etudiant',function(){
-    $etudiants=['toto','titi','koko','dodo'];
-    return view ('etudiant',compact('etudiants'));
-});
+//  pour afficher
+route::get('/etudiant',[etudiantcontrolleur::class,'index']);
+// fin afficher
 route::get('/master',function(){
     return view ('master');
 });
@@ -38,12 +37,10 @@ return view('new_etudiant');
 
 // insertion dans la bd
 
-Route::post('/store_etudiant',function(Request $request)
-{
- \DB::table('etudiants')->insert([
-'noms'=>$request->noms,
-'age'=>$request->age
- ]);  
-}
-)->name('store_etudiants');
-// fin route insert
+Route::post('/store_etudiant',[etudiantcontrolleur::class,'store'])->name('store_etudiants');
+// fin  insertion
+
+//  pour ramener au form
+ Route::get('/edit_etudiant/{id}',[etudiantcontrolleur::class,'edit'])->name('edit_etudiant');
+//pour modifier
+Route::POST('/update_etudiant',[etudiantcontrolleur::class,'update'])->name('update_etudiants');
