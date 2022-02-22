@@ -1,6 +1,6 @@
 @extends('./layout.master')
 @section('contenu')
- <form action="{{ Route('update_etudiants')}}" method="post">
+ <form action="{{ Route('update_etudiant')}}" method="post">
      @csrf
      <input type="hidden" value="{{$etud->id}}" name="id">
      <label for="">Noms</label>

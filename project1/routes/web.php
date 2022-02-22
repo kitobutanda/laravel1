@@ -43,4 +43,4 @@ Route::post('/store_etudiant',[etudiantcontrolleur::class,'store'])->name('store
 //  pour ramener au form
  Route::get('/edit_etudiant/{id}',[etudiantcontrolleur::class,'edit'])->name('edit_etudiant');
 //pour modifier
-Route::POST('/update_etudiant',[etudiantcontrolleur::class,'update'])->name('update_etudiants');
+Route::POST('/update_etudiant',[etudiantcontrolleur::class,'update'])->name('update_etudiant');
