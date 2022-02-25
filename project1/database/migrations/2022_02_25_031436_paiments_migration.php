@@ -4,10 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class EtudiantsMigration extends Migration
+class PaimentsMigration extends Migration
 {
-  
-  
     /**
      * Run the migrations.
      *
@@ -15,14 +13,12 @@ class EtudiantsMigration extends Migration
      */
     public function up()
     {
-      
-        schema::create('etudiants',function(Blueprint $table)
-        {
+        //
+        Schema::create('paiements',function(Blueprint $table){
             $table->id();
-            $table->string('noms');
-            $table->string('age');
-        });  //
-    
+            $table->integer('frais');
+            $table->string('responsable');
+        });
     }
 
     /**

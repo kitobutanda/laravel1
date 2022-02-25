@@ -12,20 +12,30 @@ background-color: red;
   
 }
 #menu li{
-    display:inline-block;
+    display:inline-block
     
 }
 #menu li a {
-    text-decoration:none;
+    text-decoration:none
 }
     </style>
 </head>
 <body>
     <!-- menu  -->
-    <ul id="menu ">
-        <li><a href="{{route('new')}}">etudiant</a></li>
-        <li><a href="/payement">payement</a></li>
+    <div class="container">
+
+
+        <div class="navbar navbar-expand fixed-top">
+        <ul id="menu " class="navbar nav">
+        <li class="nav-item"><a href="{{route('new')}}" class="nav-link">etudiant</a></li>
+     
+        <li class="nav-item"><a href="{{route('paiement')}}" >paiement</a></li>
     </ul>
+        </div>
+
+
+    </div>
+   
     <!-- fin menu -->
 
 
