@@ -29,7 +29,11 @@ class etudiantcontrolleur extends Controller
      //back retourne l'alerte sur la meme page
     // return back()->with('message','inserer avec succes')  ;
     // redirect permet de retourner un message a l'autre page
-    return redirect()->route('etudiant') ->with('message','inserer avec succes');
+    // return redirect()->route('etudiant') ->with('message','inserer avec succes');
+
+    return Response()->json([
+        "message"=>"insertion sussess"
+    ]);
          
     }
  public function edit($id)
